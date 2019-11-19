@@ -392,7 +392,10 @@ background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox=
     font-weight: bold;
     max-width: 80vw;
     color: green;
-    padding: 0 20px 0 20px;
+    text-align: center;
+    padding: 5px 20px 7px 20px;
+    margin: auto;
+    line-height: 1.5;
 }
 
 
@@ -416,15 +419,19 @@ background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox=
     }
 
     .cta-button {
-   border: 3px solid #5b2;
-   padding: 5px 7px 5px 7px;
-   border-radius: 0.5em;
-   margin: 9em 0 0 4.5em;
-   background-color: #fff;
-   font-size: 5vh;
-   color: #f90;
-   filter: contrast(1.5);
-   min-width: 5em;
+       border: 3px solid #5b2;
+       padding: 5px 7px 5px 7px;
+       border-radius: 0.5em;
+       margin: 9em 0 0 4.5em;
+       background-color: #fff;
+       font-size: 5vh;
+       color: #f90;
+       filter: contrast(1.5);
+       min-width: 5em;
+}
+
+#iphone-all{
+  display: none;
 }
 
 /*    article#track h1 {
@@ -445,14 +452,17 @@ background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox=
    border-radius: 0.5em;
    position: absolute;
    margin-top: 8em;
-
-   right:7px;
+   right:14px;
    background-color: #fff;
    font-size: 5vh;
    color: #f90;
    filter: contrast(1.5);
    min-width: 5em;
 }
+ .cta-button:hover {
+   color: #9f0;
+   
+ }
 
 .mood {
 background-color: green;
@@ -483,20 +493,171 @@ transition-timing-function: ease-in;
   z-index:3;
 }
 
+.bubble{
+  color: white;
+  font-weight: bold;
+  width: 7em;
+  height: 2em;
+  padding: 5px 7px; 
+  z-index: 99;
+  position: relative;
+  } 
 
 .bubble1{
   width: 7em;
-  height: 2em;
-  background-color: rgb(0, 153, 255);
+  height: 2.75em;
+  background-color: #0f9;
   z-index: 99;
-  position: relative; 
-  top: 170px; 
-  left: -100px;
+  top: 60px; 
+  left: -160px;
   transition: all 1s ease 0s;
   transform: translate3d(-3em, 0px, 0px);
   border-radius: 0.5em; 
   padding: 5px 7px;
+   z-index: 99;
+    transition-delay: 0.12s;
+    animation: bubble1Left linear 2.4s;
 }
+@keyframes bubble1Left{
+    0%{
+        transform: translate3d(-4em,0,0);
+        opacity: 0;
+    }
+    88%{
+        opacity: 0;
+    }
+    100%{
+        transform: translate3d(-4em,0,0);
+        opacity: 1;
+    }
+
+}
+.bubble2 {
+  width: 7em;
+  height: 2em;
+  padding: 5px 7px; 
+  transition: all 1s ease 0s;
+  transform: translate3d(-3em, 0px, 0px);
+  border-radius: 0.5em; 
+  top: 107px; 
+  left: -178px;
+  background-color: rgb(0, 153, 255);
+  transition-delay: 0.12s;
+    animation: bubble2Right linear 5s;
+    filter: contrast(1.5);
+}
+@keyframes bubble2Right{
+    0%{
+        transform: translate3d(100px,0,0);
+        opacity: 0;
+        z-index: -99;
+    }
+    88%{
+        opacity: 0;
+    }
+    100%{
+        transform: translate3d(-100,0,0);
+        opacity: 1;
+        z-index: 99;
+    }
+
+}
+.bubble3 {
+  width: 10em;
+  height: 3.8em;
+  line-height: 1.1;
+  padding: 5px 7px; 
+  transition: all 1s ease 0s;
+  /*transform: translate3d(-3em, 0px, 0px);*/
+  border-radius: 0.5em; 
+  top: 147px; 
+  left: -398px;
+  background-color: #0f9;
+   z-index: 99;
+    transition-delay: 0.12s;
+    animation: bubble3Left linear 7.1s;
+}
+@keyframes bubble3Left{
+    0%{
+        transform: translate3d(-140px,0,0);
+        opacity: 0;
+        z-index: -99;
+    }
+    92%{
+        opacity: 0;
+    }
+    100%{
+        transform: translate3d(-10px,0,0);
+        opacity: 1;
+        z-index: 99;
+    }
+}
+
+
+
+.bubble4  {
+  width: 10em;
+  height: 3.4em;
+  padding: 5px 7px; 
+  transition: all 1s ease 0s;
+  transform: translate3d(-3em, 0px, 0px);
+  border-radius: 0.5em; 
+  top: 212px; 
+  left: -458px;
+  background-color: rgb(0, 153, 255);
+   z-index: 99;
+    transition-delay: 0.12s;
+    animation: bubble4Right linear 8.8s;
+    filter: contrast(1.5);
+}
+@keyframes bubble4Right{
+    0%{
+        transform: translate3d(100px,0,0);
+        opacity: 0;
+        z-index: -99;
+    }
+    96%{
+        opacity: 0;
+    }
+    100%{
+        transform: translate3d(-100,0,0);
+        opacity: 1;
+        z-index: 99;
+    }
+}
+
+.bubble5 {
+  width: 10em;
+  height: 3.2em;
+  padding: 5px 7px; 
+  transition: all 1s ease 0s;
+  /*transform: translate3d(-3em, 0px, 0px);*/
+  border-radius: 0.5em; 
+  top: 273px; 
+  left: -677px;
+  background-color: #0f9;
+  z-index: 99;
+    transition-delay: 0.12s;
+    animation: bubble5Left linear 10.4s;
+}
+@keyframes bubble5Left{
+    0%{
+        transform: translate3d(-100px,0,0);
+        opacity: 0;
+        z-index: -99;
+    }
+    96%{
+        opacity: 0;
+    }
+    100%{
+        transform: translate3d(0px,0,0);
+        opacity: 1;
+        z-index: 99;
+    }
+}
+
+
+
 
 </style>
 
@@ -598,7 +759,7 @@ transition-timing-function: ease-in;
           <div class="ui-grid-item">
             <p>The 7 Day Cleanse with Shaklee's non-GMO herbs are a gentle way to clean the liver and balance the gut microbiome.</p><p>Do you know how many trillions of bad bacteria, viruses and parasites are living in us? To get started,</p>
  <h3>call or text me at 847-826-1121, Candy</h3>
-<img src="https://scontent-ort2-2.xx.fbcdn.net/v/t1.0-9/p960x960/69548651_3092225967485519_5272405941654913024_o.jpg?_nc_cat=101&_nc_oc=AQm8SEU3GVIB4Q__0817FstXg1FedTnkwouaTS6jN5f98sZOwl-dk5w5rhWiaXKTflk&_nc_ht=scontent-ort2-2.xx&oh=d58e98cee995dc47aa7ad8d1ba369d50&oe=5E4AFAFA" alt=""></div>
+<img src="https://scontent-ort2-2.xx.fbcdn.net/v/t1.0-9/p960x960/69548651_3092225967485519_5272405941654913024_o.jpg?_nc_cat=101&_nc_oc=AQm8SEU3GVIB4Q__0817FstXg1FedTnkwouaTS6jN5f98sZOwl-dk5w5rhWiaXKTflk&_nc_ht=scontent-ort2-2.xx&oh=d58e98cee995dc47aa7ad8d1ba369d50&oe=5E4AFAFA" alt="" style="background-size: cover;background-repeat: no-repeat;"></div>
           <div class="ui-grid-item"><p>The 7 Day Cleanse with Shaklee's non-GMO herbs are a gentle way to clean the liver and balance the gut microbiome.</p><p>Do you know how many trillions of bad bacteria, viruses and parasites are living in us? To get started,</p>
             <img src="https://scontent-ort2-2.xx.fbcdn.net/v/t1.0-0/p180x540/38702089_2224417267599731_8060933636339269632_o.jpg?_nc_cat=101&_nc_oc=AQkqjcjJUKollD9uELUHBzX_mT5cZ3F1R8b2_Sow-yU-kHBBHkPXw3kKMon32BqCSfQ&_nc_ht=scontent-ort2-2.xx&oh=a8c901d26a53be19d3099c0bae8e2014&oe=5E896159" alt="">
 <ul>
@@ -606,32 +767,36 @@ transition-timing-function: ease-in;
  
 </ul>
           </div>
-           <div class="ui-grid-item">
-            <div class="div" style="display:flex;height: 100vh;width: 100%;background: #f90 url(https://dl3.pushbulletusercontent.com/MRhSw6h0EVn3uT87jY7uRtngG8PRxxag/loShakApp.jpg) fixed no-repeat;justify-content: center;align-content: center;background-size: 100%;background-position: top;">
+           <div class="ui-grid-item" id="iphone-all" >
+            <div class="iphone-div" style="display:flex;height: 100vh;width: 100%;background: #f90 url(https://dl3.pushbulletusercontent.com/MRhSw6h0EVn3uT87jY7uRtngG8PRxxag/loShakApp.jpg) fixed no-repeat;justify-content: center;align-content: center;background-size: 100%;background-position: top;">
 
                 <div class="iphone-container" style="display: flex;justify-content: center;padding-top: 22vh;">
         <img style="height: 450px;width: auto;" src="https://dl3.pushbulletusercontent.com/NHXVjWzsriUlOZmiY0yceyi1svDhwtWh/iphoneTransparent.77413c60_2.png" alt="iphone with white background">
-         <div class="bubble1">
-                <h5 style="margin-top: 0.25em;">shakleee</h5>
-              </div>
-              <div class="bubble2">
-                <h5></h5>
-              </div>
-              <div class="bubble3">
-                <h5></h5>
-              </div>
-              <div class="bubble4">
-                <h5></h5>
-              </div>
-              <div class="bubble5">
-                <h5></h5>
-              </div>
+         <h5 class="bubble bubble1">
+               Have you heard?!</h5>
+              
+              <h5 class="bubble bubble2">
+               What!?</h5>
+              
+              <h5 class="bubble bubble3" style="font">
+                Shaklee has a Mobile App now, so useful! #sweet!
+                
+              </h5>
+              <h5 class="bubble bubble4">
+                Wow! I want it too. Where do I download it?</h5>
+              
+              <h5 class="bubble bubble5">
+                The Google Play Store or Apple App Store</h5>
+              
       </div>
 
               
             </div>
           </div>
-          <div class="ui-grid-item">hey2</div>
+          <style>
+            
+          </style>
+          <div class="ui-grid-item"><span class="trey"></span></div>
           <div class="ui-grid-item">hey3</div>
           <div class="ui-grid-item">hey</div>
           <div class="ui-grid-item">hey2</div>
