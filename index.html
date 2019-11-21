@@ -430,9 +430,6 @@ background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox=
        min-width: 5em;
 }
 
-#iphone-all{
-  display: none;
-}
 
 /*    article#track h1 {
   font-family: "Montserrat" , arial, sans-serif;
@@ -444,6 +441,7 @@ background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox=
 }*/
 
 }
+
 
 
 .cta-button {
@@ -659,6 +657,257 @@ transition-timing-function: ease-in;
 
 
 
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  background: #fff;
+  color: #999;
+}*/
+
+a {
+  text-decoration: none;
+  margin: 1rem 0;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.8125rem;
+  letter-spacing: 1px;
+}
+
+p {
+  font-size: 0.9rem;
+  margin: 1rem 0;
+  line-height: 1.5;
+}
+
+section {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  /*padding: 30px;*/
+}
+
+h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: #333;
+  font-size: 1.825rem;
+  margin: 1.3rem 0;
+}
+
+.section-lead {
+  max-width: 600px;
+  /*margin: 1rem auto 1.5rem;*/
+}
+
+.service a {
+  color: #5b7abb;
+  display: block;
+}
+
+.service h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: #56ceba;
+  font-size: 1.3rem;
+  /*margin: 1rem 0 0.6rem;*/
+}
+
+.services-grid {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.service {
+  background: #fff;
+  /*margin: 20px;*/
+/*  padding: 20px;*/
+  border-radius: 4px;
+  text-align: center;
+  -webkit-box-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  border: 2px solid #e7e7e7;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.service:hover {
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
+  -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
+}
+
+.service i {
+  font-size: 3.45rem;
+  margin: 1rem 0;
+}
+
+.service1 i,
+.service1 h4,
+.service1 .cta {
+  color: #42b7ca;
+}
+
+.service1:hover {
+  border: 2px solid #42b7ca;
+}
+
+.service2 i,
+.service2 h4,
+.service2 .cta {
+  color: #425fca;
+}
+
+.service2:hover {
+  border: 2px solid #425fca;
+}
+
+.service3 i,
+.service3 h4,
+.service3 .cta {
+  color: #9c42ca;
+}
+
+.service3:hover {
+  border: 2px solid #9c42ca;
+}
+
+.service .cta span {
+  font-size: 0.6rem;
+}
+
+.service > * {
+  flex: 1 1 100%;
+}
+
+.service .cta {
+  align-self: flex-end;
+}
+
+
+
+.services-grid p {
+  color: black;
+}
+
+@media all and (max-width:900px) {
+  .services-grid {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+  }
+}
+
+
+
+#items-body {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 20px;
+  margin: 0;
+}
+
+.items {
+  height: 500px;
+  padding: 50px;
+  width: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  user-select: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+  background: rgba(255,255,255,0.1);
+  font-size: 0;
+  perspective: 500px;
+}
+
+.items.active {
+  background: rgba(255,255,255,0.3);
+  cursor: grabbing;
+  cursor: -webkit-grabbing;
+}
+
+.item {
+  width: 250px;
+  height: calc(100% - 40px);
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  font-weight: 100;
+  color: rgba(0,0,0,0.18);
+  margin-right: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+
+.item:nth-child(9n+1) {
+  background: #fff8ef;
+}
+
+.item:nth-child(9n+2) {
+  background: #fde8e9;
+}
+
+.item:nth-child(9n+3) {
+  background: #f2cad9;
+}
+
+.item:nth-child(9n+4) {
+  background: #d6a4bf;
+}
+
+.item:nth-child(9n+5) {
+  background: #bc9ec1;
+}
+
+.item:nth-child(9n+6) {
+  background: #9a88ad;
+}
+
+.item:nth-child(9n+7) {
+  background: #7d7291;
+}
+
+.item:nth-child(9n+8) {
+  background: #59607d;
+}
+
+.item:nth-child(9n+9) {
+  background: #424760;
+}
+
+
 </style>
 
 
@@ -680,10 +929,26 @@ transition-timing-function: ease-in;
             </li>
             <!-- <li><a class='active' href="#"><i class="icon-star"></i> Now Playing</a></li> -->
             <br>
-            <li><a href="#"><!-- <i class="icon-info"></i> -->Join Today</a></li>
-            <li><a href="#"><!-- <i class="icon-app"></i> -->About Us</a></li>
-            <li><a href="#"><!-- <i class="icon-car"></i> -->Get A Car</a></li>
-            <li><a href="#"><!-- <i class="icon-envelope"></i> -->Contact Us</a></li>
+          <div id='items-body'><div class="items">
+    <div class="item item1">01</div>
+    <div class="item item2">02</div>
+    <div class="item item3">03</div>
+    <div class="item item4">04</div>
+    <div class="item item5">05</div>
+    <div class="item item6">06</div>
+    <div class="item item7">07</div>
+    <div class="item item8">08</div>
+    <div class="item item9">09</div>
+    <div class="item item10">10</div>
+    <div class="item item11">11</div>
+    <div class="item item12">12</div>
+    <div class="item item13">13</div>
+    <div class="item item14">14</div>
+    <div class="item item15">15</div>
+    <div class="item item16">16</div>
+    <div class="item item17">17</div>
+    <div class="item item18">18</div>
+  </div></div>
           </ul>
         </nav> <!-- //Drawer-Nav -->
       </section><!-- //drawer -->
@@ -797,7 +1062,32 @@ transition-timing-function: ease-in;
             
           </style>
           <div class="ui-grid-item"><span class="trey"></span></div>
-          <div class="ui-grid-item">hey3</div>
+          <div class="ui-grid-item"><section>
+  <h3>Our Services</h3>
+  <p class="section-lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  <div class="services-grid">
+    <div class="service service1">
+      <i class="ti-bar-chart"></i>
+      <h4>Wealth Management</h4>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <a href="#" class="cta">Read More <span class="ti-angle-right"></a>
+    </div>
+
+    <div class="service service2">
+      <i class="ti-light-bulb"></i>
+      <h4>Financial Planning</h4>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <a href="#" class="cta">Read More <span class="ti-angle-right"></a>
+    </div>
+
+    <div class="service service3">
+      <i class="ti-money"></i>
+      <h4>Investment Banking</h4>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <a href="#" class="cta">Read more <span class="ti-angle-right"></span></a>
+    </div>
+  </div>
+</section></div>
           <div class="ui-grid-item">hey</div>
           <div class="ui-grid-item">hey2</div>
           <div class="ui-grid-item">hey3</div>
@@ -862,6 +1152,37 @@ transition-timing-function: ease-in;
     }
   });
 })(jQuery);</script>
+
+
+<script>const slider = document.querySelector('.items');
+let isDown = false;
+let startX;
+let scrollLeft;
+
+slider.addEventListener('mousedown', (e) => {
+    isDown = true;
+    slider.classList.add('active');
+    startX = e.pageX - slider.offsetLeft;
+    scrollLeft = slider.scrollLeft;
+});
+
+slider.addEventListener('mouseleave', () => {
+    isDown = false;
+    slider.classList.remove('active');
+});
+
+slider.addEventListener('mouseup', () => {
+    isDown = false;
+    slider.classList.remove('active');
+});
+
+slider.addEventListener('mousemove', (e) => {
+    if (!isDown) return; 
+    e.preventDefault();
+    const x = e.pageX - slider.offsetLeft;
+    const walk = (x - startX) * 3;
+    slider.scrollLeft = scrollLeft - walk;
+});</script>
 </body>
 
 </html>
